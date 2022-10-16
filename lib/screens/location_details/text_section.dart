@@ -6,8 +6,8 @@ import 'package:tourapp/style.dart';
 class Textsection extends StatelessWidget {
   final String _title;
   final String _body;
-  static const double _hpad=16.0;
-  Textsection(this._title,this._body);
+  static const double _hpad = 16.0;
+  const Textsection(this._title, this._body, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,14 +16,15 @@ class Textsection extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         Container(
-          padding:const EdgeInsets.fromLTRB(_hpad, 32.0, _hpad, 4.0),
-          child: Text(_title,
-          style: TitleTextStyle),
-          ),
+          padding: const EdgeInsets.fromLTRB(_hpad, 32.0, _hpad, 4.0),
+          child: Text(_title, style: kTitleTextStyle),
+        ),
         Container(
-          padding:const EdgeInsets.fromLTRB(_hpad, 10.0, _hpad, _hpad) ,
-          child: Text(_body,style: BodyTextStyle,)
-          ),
+            padding: const EdgeInsets.fromLTRB(_hpad, 10.0, _hpad, _hpad),
+            child: Text(
+              _body,
+              style: kBodyTextStyle,
+            )),
       ],
     );
   }
